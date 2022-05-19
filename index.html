@@ -196,9 +196,18 @@
 </div>
     </header>
 
-<main class="ma out">
+<main class="ma">
 
-    <div class=""></div>
+    <div class="out"></div>
+<div class="tre">
+<div class="trending"></div>
+</div>
+
+</div>
+
+
+
+
 
 </main>
 <script>
@@ -249,8 +258,88 @@ document.querySelector("#search").value = '';
         .catch(err =>{
             console.error(err)
         });
-    });
+
+    })
 }
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", ini )
+
+
+
+function ini(){
+
+
+
+
+let url = "https://api.giphy.com/v1/gifs/trending?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=25&rating=g";
+
+
+       
+
+
+        fetch(url)
+        .then(response => response.json() )
+        .then(content  => {
+console.log(content.data);
+
+console.log('META',content.meta);
+
+let arr = content.data;
+
+let g = 0;
+
+arr.forEach(function(e){
+
+ let img = document.createElement("img");
+img.src = e.images.fixed_height.url
+
+
+
+
+let trend = document.querySelector(".trending");
+
+trend.appendChild(img)
+
+
+
+
+
+
+})
+        
+        })
+        }
+    
+
+
+
+        let op = 0;
+
+        slided()
+
+        function slided() {
+  var i;
+  var slides = document.querySelector(".trending").children.getAttributes();
+  for (i = 0; i < slides.length; i++) {
+
+    
+    slides[i].style.display = "none";
+  }
+
+  console.log(slides)
+  op++;
+  if (op > slides.length) {op = 1}
+  slides[op-1].style.display = "block";
+  setTimeout(slided, 2000); // Change image every 2 seconds
+} 
+
+
+
 
 
 
