@@ -682,17 +682,15 @@ to{
 
 @media screen and (max-width: 900px) {
     
-        header{
-
-        }
+       
 }
 .ma{
     position: relative;
-    margin-top: 140px;
+    margin-top: 120px;
     align-items: center;
     text-align: center;
     z-index: 0;
-    background-attachment: fixed;
+    background-attachment: fixd;
 }
 header{
     z-index: 2;
@@ -700,47 +698,117 @@ header{
     top: 0;
 }
 
-.out{
-    margin-top: 10px;
-}
 
-.tre{
-    overflow-x: scroll;
+.carouse {
+    margin-bottom: 20px;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    background: #00000012;
+background-attachment: fixed;
+z-index: 2;
+    margin: auto;
+      margin-left: -50px;
+      display: flex;
+
+ max-width: 100000px;
+animation: slid;
+ overflow-x: scroll;
+ scrollbar-arrow-color: transparent;
+
   
-margin: auto;
-  background-color: rgb(0, 0, 0);
-}
- .trending > img:hover{
+  /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  
+  }
+  
 
-    transform: scaleY(100px);
+  .carouse::-webkit-scrollbar {
+    display: none;
+    animation: sli infinite;
+
+  }
+
+  .cel > img{
+      width: 200%;
+      height: 100%;
+      margin:0 80px;
+      animation: slid;
+  }
+  
+  /* cell number 
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  */
+
+  .cel{
+      
+      width: 100%;
+     height: 30vh;
+animation: sli 50s; 
+margin-right: 200px;
+position: relative;
+z-index: 1;
+transition-delay: 10s;
+animation: slid infinite;
+  }
+.siz{
+
+height: 170px;
+width: 200px;
+margin-right: -200px;
+margin-left: -50px;
+    border-radius: 4px ;
 }
-.trending{
+.siz:hover{
+    cursor: pointer;
+transform: scale(1.3);
+border: 2px solid black;
+z-index: 4;
+}
+
+.big_container{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: aqua;
+}
+
+.mo{
+    width: 100%;
     
-    display: flex;
+    background-color: black;
     
+    position: absolute;
+    left: 0;
 
-   box-sizing: content-box;
-   inset: inherit;
-   animation: row 6s infinite ;
-
+    height: max-content;
+    right: 0;
 }
 
 
+.si{
+    width: 150px;
+height: 200px;
+margin-right: 5px;
+margin-top: 5px;
+    box-sizing: content-box;
+    background-color: liceblue;
+    border-radius: 4px;
+}
 
+.si:hover{
+cursor: pointer;
+transform: scale(1.2);
+}
 
-.trending {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.4s;
-    animation-name: fade;
-    animation-duration: 1.4s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
-  
-  @keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-  }
+.s{
+    background-color: rgb(113, 182, 244);
+}
+
