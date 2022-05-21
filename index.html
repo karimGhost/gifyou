@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+
     <title>gifyou</title>
 </head>
 <body>
@@ -16,17 +20,15 @@
 
             
 <img width="140" height="90"
- style=" box-sizing: border-box; box-shadow:inset rgb(130, 212, 14),blue; " 
-  class="img" src="iconlogo.png"/>
+ style=" box-sizing: border-box; box-shadow:inset rgb(130, 212, 14),blue;" class="img" src="iconlogo.png"/>
 
 <div class="navbar">
 
 <ul class="navul bar">
-    <li class="font" ><a class="fot"  href="/" >
+    <li class="font"><a class="fot"  href="/" >
         New_Gifs</a> </li>
     
-    <span class="dropdown headnav" style="cursor: pointer; ;
-  ;">
+    <span class="dropdown headnav" style="cursor: pointer;">
         <span class="fon drop"  >more gif<i class="fa fa-angle-down" aria-hidden="true"></i></span>
        
         <div class="drop_container">
@@ -79,7 +81,6 @@
 
 <!-- second column -->
 
-<div style="background-color: rgb(253, 253, 84); margin-top: -10px;">
     <p style="font-size: 1.3rem; font-weight: bold; color: rgb(176, 43, 43); margin-top: 10px;margin-left: 10px; cursor: pointer;">
         Stickers 
         <span style="font-size:15px">&RightAngleBracket;</span> </p>
@@ -99,7 +100,7 @@
 
 </div>
 
-   </div>
+   
 
 <!-- third column -->
 
@@ -197,38 +198,35 @@
     </header>
 
 <main class="ma">
+    <h2 style= "text-align: left; color: grey; font-style: italic;">trending</h2>
 
-    <div class="out"></div>
-<div class="tre">
-<div class="trending"></div>
+    <div class="carouse" data-flickit='{ "autoPlay": true }'>
+       
+      </div>
+      
+<!--
+<div class="carousel trending" data-flickity='{ "autoplay": true,  "wrapAround": true }'>
+-->
+<h2 style= "text-align: left; color: grey; font-style: italic;">MoreGifs</h2>
+
+<div class="big_container">
+<div class="mo">
+
+
 </div>
-
 </div>
-
 
 
 
 
 </main>
-<script>
+<link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+<script type="text/javascript">
 
 
-window.addEventListener("DOMContentLoaded", function(e){
-    alert("I LOVE U ANGELA ;*")
-    
-    
-    
-let h = prompt("do you love me angela,  (yes or no)")
-    if( h === "yes"){
-        alert("ilove you more")
-    }else if(h === "no"){
-
-
-        alert("thats sad")
-    }else{
-       window.location.reload()
-    }
-})
 
 
 let APIKEY = "Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR";
@@ -310,19 +308,31 @@ console.log('META',content.meta);
 
 let arr = content.data;
 
-let g = 0;
 
 arr.forEach(function(e){
+    
+let doc = document.createElement("div");
 
- let img = document.createElement("img");
-img.src = e.images.fixed_height.url
+doc.classList.add("cel");
+
+let anc  = document.createElement("a");
+
+anc.href = e.images.downsized.url;
+
+anc.classList.add("siz")
+let im = document.createElement("img")
+im.classList.add("siz")
+im.src =e.images.downsized_medium.url;
+
+  
+anc.appendChild(im)
 
 
+doc.appendChild(anc)
 
+let trend = document.querySelector(".carouse");
 
-let trend = document.querySelector(".trending");
-
-trend.appendChild(img)
+trend.appendChild(doc) 
 
 
 
@@ -334,32 +344,66 @@ trend.appendChild(img)
         })
         }
     
-
-
-
-        let op = 0;
-
-        slided()
-
-        function slided() {
-  var i;
-  var slides = document.querySelector(".trending").children.getAttributes();
-  for (i = 0; i < slides.length; i++) {
-
     
-    slides[i].style.display = "none";
-  }
+   
 
-  console.log(slides)
-  op++;
-  if (op > slides.length) {op = 1}
-  slides[op-1].style.display = "block";
-  setTimeout(slided, 2000); // Change image every 2 seconds
-} 
+        document.addEventListener("DOMContentLoaded", trends)
+
+        function trends(){
+            let url = "https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=503&offset=0"
+let ul="https://api.giphy.com/v1/gifs/trending?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=200&rating=g";
+          let ur=  "https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=90&offset=2";
+                 
+          fetch(url)
+        .then(response => response.json())
+        .then(content => {
+
+            console.log(content.data)
+
+            console.log('META', content.meta )
+    
+
+        let trend = content.data;
+
+
+    trend.forEach(function(e){
+        
+
+        let anc  = document.createElement("a");
+
+anc.href = e.images.downsized.url;
+anc.classList.add("si")
 
 
 
+let im = document.createElement("img");
+ im.src = e.images.downsized_medium.url;
+im.classList.add("si")
+im.classList.add("s")
 
+anc.appendChild(im)
+
+
+ let va = document.querySelector(".mo");
+
+ va.appendChild(anc)
+ 
+
+
+ 
+    })
+
+        
+ })    
+        }
+
+
+
+ 
+
+       
+        
+   
 
 
 
@@ -423,6 +467,8 @@ document.querySelector(".gifac").style.display = "none";
 }
 
 }
+
+
 
 /*
 let v = document.querySelector(".gifacc");
