@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+
+    <title>Originals_gifs</title>
+</head>
+<body>
+    <header>
+    
+        <div class="navigation">
+
+            
+<img width="140" height="90"
+ style=" box-sizing: border-box; box-shadow:inset rgb(130, 212, 14),blue;" class="img" src="iconlogo.png"/>
+
+<div class="navbar">
+
+<ul class="navul bar">
+    <li class="font"><a class="fot"  href="/" >
+        </a> </li>
+    
+    <span class="dropdown headnav" style="cursor: pointer;">
+        <span class="fon drop"  ><i class="" aria-hidden="true"></i></span>
+       
+        <div class="drop_container">
+        <li class="nav_item "><a class="droped" href=""></a></li>
+    <li class="nav_item "><a class="droped" href=""></a></li>
+        </span>
+</div>
+<!---->
+
+
+</ul>
+
+
+  <div class="navv">
+
+
+
+
+<ul class="nav">   
+   
+    <!--first column-->
+    <div style="background-color: yellow; margin-top: -10px;">
+    <p style="font-size: 1.3rem; font-weight: bold; color: rgb(176, 43, 43); margin-top: 10px;margin-left: 10px; cursor: pointer;"> categories <span style="font-size:15px">&RightAngleBracket;</span> </p>
+  
+    <div style="background-color: yellow; margin-top: -5px;" class="colfull"> 
+   
+        <div class="col1">
+   <li onclick="animal()" class="nav_item  item_nav"><a onclick="animals() "  target="_blank">Animals</a></li>
+    <li   onclick="Artist()"  class="nav_item  item_nav"><a  onclick="Artist()"> Artists</a></li>
+    <li onclick="Emotions()" class="nav_item  item_nav"><a  onclick="Emotions()"> Emotions</a></li>
+    <li onclick="Ent()"   class="nav_item  item_nav"><a  onclick="Ent()" > Entertainment</a></li>
+
+    </div>
+   
+
+<div class="col2">
+    
+    <li onclick="Games()"  class="nav_item  item_nav"><a onclick="Games()" >Gaming</a></li>
+    <li onclick="holday()"  class="nav_item  item_nav"><a onclick="holiday()" >Holidays/Greetings</a></li>
+    <li onclick="reaction()" class="nav_item  item_nav"><a onclick="reaction()" >Reactions</a></li>
+    <li onclick="sports()"  class="nav_item  item_nav"><a onclick="sports()" >Sports</a></li>
+    <li onclick="clips()"  class="nav_item  item_nav"><a onclick="clips()" >Clips</a></li>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- second column -->
+
+    <p style="font-size: 1.3rem; font-weight: bold; color: rgb(176, 43, 43); margin-top: 10px;margin-left: 10px; cursor: pointer;">
+        Stickers 
+        <span style="font-size:15px">&RightAngleBracket;</span> </p>
+  
+    <div style="background-color: rgb(253, 253, 84); margin-top: -5px;" class="colfull"> 
+   
+        <div class="col1">
+   <li onclick="orgi()" class="nav_item item_nav"><a onclick="origi()" >Originals</a></li>
+    <li onclick="trending()"  class="nav_item item_nav"><a onclick="trending()" >Trending</a></li>
+    </div>
+
+<div class="col2">
+    
+    <li onclick="reactionSticker()"  class="nav_item item_nav"><a onclick="reactionSticker()" >Reactions</a></li>
+    <li onclick="packs()"  class="nav_item item_nav"><a onclick="packs()" >Packs</a></li>
+</div>
+
+</div>
+
+   
+
+<!-- third column -->
+
+<div style="background-color: rgb(253, 253, 175); margin-top: -10px;">
+    <p style="font-size: 1.3rem; font-weight: bold; color: rgb(176, 43, 43); margin-top: 10px;margin-left: 10px; cursor: pointer;">
+         Apps
+          <span style="font-size:15px">&RightAngleBracket;</span> </p>
+  
+    <div style="background-color: rgb(255, 255, 175); margin-top: -5px;" class="colfull"> 
+   
+        <div class="col1">
+   <li class="nav_item item_nav"><a href="/">Gif</a></li>
+    <li class="nav_item item_nav"><a href="/">GifWorld</a></li>
+    </div>
+
+<div class="col2">
+    
+  
+    <li class="nav_item item_nav"><a href="/">Gifyou</a></li>
+</div>
+
+</div>
+</div>
+
+
+<!-- footer column -->
+
+<div style=" background-color: rgb(27, 27, 23); margin-top: -10px;">
+    <p style="text-align: center; font-size: 1.3rem; font-weight: bold; color: rgb(255, 199, 199); margin-top: 10px;margin-left: 10px;">
+        &copy; 2022 Gif_You
+          </p>
+  
+    <div style="display: flex;  background-color: rgb(27, 27, 23); margin-top: -5px;" class="colfull"> 
+   
+        <div class="col1"  style="display:flex; flex-direction: row;">
+             <li class="nav_item font_foot item_nav"><a href="/">terms of service</a></li>
+             <li class="nav_item font_foot item_nav"><a href="/">comunity Guidelines</a></li>
+             </div>
+         
+         <div class="col2"   style="display:flex; flex-direction: column">
+             
+             <li class="nav_item font_foot item_nav"><a href="/">privacy policy</a></li>
+         </div>
+
+</div>
+
+</div>  
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+ <div class="search_bar">
+    <form class="form">
+<button id="gosearch" class="bt"type="button" ><i style="color: white;" class="fa  fa-search"></i></button> 
+<input id="search" class="search" type="search" placeholder="search Gifs " >  
+
+<button  onclick="search_close()" class="time v times times11">&times;</button>
+
+<button  style="display: block;" onclick="search_open()" id="remove_ti" class="time v times1"><i style="color: rgba(255, 255, 255, 0);" class="fa v fa-search"></i></button>
+
+    </form>
+    <button class="time v v_search ti times1"   onclick="search_open()" id="remove_ti" ><i style="color: white;" class="fa  fa-search"></i></button>
+
+</div>
+
+
+
+<div class="acc">
+
+    <i onclick="openacc()" onclick="openac()"  class=" gifacc fa acount fa-user">  </i> 
+    <i onclick="openac()"  class=" gifac fa acount fa-user">  </i> 
+
+   <div  class="giflogin acc_container"> 
+    <a class="logon" href="/">login</a> 
+    <a class="logon" href="/">signup</a>
+
+    <a href="/" style="display: none;"> favourite</a>
+    </div>
+</div>
+
+</div>
+    </header>
+
+<main class="ma">
+
+    <div class="out"></div>
+
+
+
+
+<h2 style= "text-align: left; font-size: 2em; margin-top: 120px; padding: 10px; padding-left: 40px; color: rgb(234, 213, 213); font-style: italic;">Animals_Gifs</h2>
+
+<div class="big_container">
+<div class="mo category">
+
+
+</div>
+</div>
+
+
+</main>
+    
+
+
+
+
+
+    <script  type="text/javascript">
+        
+
+
+
+        document.addEventListener("DOMContentLoaded", animal)
+
+function animal(){
+
+
+
+
+
+     let url ="https://api.giphy.com/v1/gifs/search?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&q=originals&limit=50&offset=0&rating=g&lang=en";
+
+
+
+fetch(url)
+.then(response => response.json())
+.then(content => {
+   console.log(content.data);
+   console.log("META", content.meta);
+
+   let arr = content.data;
+
+   arr.forEach(function(e){ 
+
+
+let anc = document.createElement("a");
+anc.href = e.images.downsized.url;
+
+
+let iimg = document.createElement("img");
+iimg.classList.add("clss");
+
+iimg.src = e.images.downsized.url;
+
+anc.appendChild(iimg);
+
+
+
+       let con = document.querySelector(".category");
+
+
+   con.appendChild(iimg)
+
+    
+
+
+ 
+
+   })
+
+}) 
+
+       }
+
+
+function search_open(){
+document.querySelector(".search_bar").style.width = "100vw";  
+document.querySelector(".ti").style.display = "none";  
+document.querySelector(".navv").style.height = "0px";
+document.querySelector(".close").style.display = "none";
+document.querySelector(".open").style.display = "block";
+document.querySelector(".gifacc").style.display = "block";
+document.querySelector(".gifac").style.display = "none";
+document.querySelector(".giflogin").style.display="none"
+
+}
+
+function search_close(){
+    document.querySelector(".bar").style.width = "0";  
+
+}
+
+
+    function openn(){
+
+
+        document.querySelector(".navv").style.height = "100vh";
+        document.querySelector(".open").style.display = "none";
+        document.querySelector(".close").style.display = "block";
+        document.querySelector(".search_bar").style.width = "0"
+        document.querySelector(".v_search").style.display = "block"
+        document.querySelector(".gifacc").style.display = "block";
+document.querySelector(".gifac").style.display = "none";
+document.querySelector(".giflogin").style.display="none"
+   
+}
+
+function closen(){
+    document.querySelector(".navv").style.height = "0px";
+        document.querySelector(".open").style.display = "block";
+        document.querySelector(".close").style.display = "none";
+
+}
+
+let f = document.querySelector(".giflogin");
+function openacc(){
+ if(f.style.display = "none"){
+
+    f.style.display = "block";
+document.querySelector(".gifacc").style.display = "none";
+document.querySelector(".gifac").style.display = "block";
+
+}
+
+}
+function openac(){
+    if(f.style.display = "block"){
+
+f.style.display = "none";
+document.querySelector(".gifacc").style.display = "block";
+document.querySelector(".gifac").style.display = "none";
+
+}
+
+}
+
+
+    </script>
+</body>
+</html>
