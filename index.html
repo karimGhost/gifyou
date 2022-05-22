@@ -57,20 +57,21 @@
     <div style="background-color: yellow; margin-top: -5px;" class="colfull"> 
    
         <div class="col1">
-   <li class="nav_item  item_nav"><a href="/">Animals</a></li>
-    <li class="nav_item  item_nav"><a href="/">Artists</a></li>
-    <li class="nav_item  item_nav"><a href="/">Emotions</a></li>
-    <li class="nav_item  item_nav"><a href="/">Entertainment</a></li>
+   <li onclick="animal()" class="nav_item  item_nav"><a onclick="animals() "  target="_blank">Animals</a></li>
+    <li   onclick="Artist()"  class="nav_item  item_nav"><a  onclick="Artist()"> Artists</a></li>
+    <li onclick="Emotions()" class="nav_item  item_nav"><a  onclick="Emotions()"> Emotions</a></li>
+    <li onclick="Ent()"   class="nav_item  item_nav"><a  onclick="Ent()" > Entertainment</a></li>
 
     </div>
+   
 
 <div class="col2">
     
-    <li class="nav_item  item_nav"><a href="/">Gaming</a></li>
-    <li class="nav_item  item_nav"><a href="/">Holidays/Greetings</a></li>
-    <li class="nav_item  item_nav"><a href="/">Reactions</a></li>
-    <li class="nav_item  item_nav"><a href="/">Sports</a></li>
-    <li class="nav_item  item_nav"><a href="/">Clips</a></li>
+    <li onclick="Games()"  class="nav_item  item_nav"><a onclick="Games()" >Gaming</a></li>
+    <li onclick="holday()"  class="nav_item  item_nav"><a onclick="holiday()" >Holidays/Greetings</a></li>
+    <li onclick="reaction()" class="nav_item  item_nav"><a onclick="reaction()" >Reactions</a></li>
+    <li onclick="sports()"  class="nav_item  item_nav"><a onclick="sports()" >Sports</a></li>
+    <li onclick="clips()"  class="nav_item  item_nav"><a onclick="clips()" >Clips</a></li>
 </div>
 
 </div>
@@ -88,14 +89,14 @@
     <div style="background-color: rgb(253, 253, 84); margin-top: -5px;" class="colfull"> 
    
         <div class="col1">
-   <li class="nav_item item_nav"><a href="/">Originals</a></li>
-    <li class="nav_item item_nav"><a href="/">Trending</a></li>
+   <li onclick="orgi()" class="nav_item item_nav"><a onclick="origi()" >Originals</a></li>
+    <li onclick="trending()"  class="nav_item item_nav"><a onclick="trending()" >Trending</a></li>
     </div>
 
 <div class="col2">
     
-    <li class="nav_item item_nav"><a href="/">Reactions</a></li>
-    <li class="nav_item item_nav"><a href="/">Packs</a></li>
+    <li onclick="reactionSticker()"  class="nav_item item_nav"><a onclick="reactionSticker()" >Reactions</a></li>
+    <li onclick="packs()"  class="nav_item item_nav"><a onclick="packs()" >Packs</a></li>
 </div>
 
 </div>
@@ -198,6 +199,10 @@
     </header>
 
 <main class="ma">
+
+    <div class="out"></div>
+
+    <div class="main_container">
     <h2 style= "text-align: left; color: grey; font-style: italic;">trending</h2>
 
     <div class="carouse" data-flickit='{ "autoPlay": true }'>
@@ -218,12 +223,13 @@
 
 
 
-
+</div>
 </main>
+
 <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
-
+<script src="category.js"></script>
 <script type="text/javascript">
 
 
@@ -265,9 +271,12 @@ fc.textContent = content.data[0].title,
 fig.appendChild(img);
 fig.appendChild(fc);
 
+
+
 let out = document.querySelector(".out"); 
 
 out.insertAdjacentElement('afterbegin', fig);
+document.querySelector(".main_container").style.visibility ="hidden";
 
 document.querySelector("#search").value = '';
         })
@@ -320,8 +329,10 @@ let anc  = document.createElement("a");
 anc.href = e.images.downsized.url;
 
 anc.classList.add("siz")
-let im = document.createElement("img")
-im.classList.add("siz")
+let im = document.createElement("img");
+im.classList.add("siz");
+im.classList.add("sz");
+
 im.src =e.images.downsized_medium.url;
 
   
@@ -350,7 +361,7 @@ trend.appendChild(doc)
         document.addEventListener("DOMContentLoaded", trends)
 
         function trends(){
-            let url = "https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=503&offset=0"
+            let url = "https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=50&offset=0"
 let ul="https://api.giphy.com/v1/gifs/trending?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=200&rating=g";
           let ur=  "https://api.giphy.com/v1/stickers/packs/3138/stickers?api_key=Cig5d5Q9Tt7dWXsfN7ETHrST7hliU4LR&limit=90&offset=2";
                  
@@ -397,13 +408,186 @@ anc.appendChild(im)
  })    
         }
 
+      
 
+ function Emotions(){
+    let page = window.location.href;
+            let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/Emotions.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/Emotions.html";
+window.open(url, "_blank")
+
+
+ }
+function Ent(){
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/Entertainment.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/Entertainment.html";
+window.open(url, "_blank")
+
+
+}
+
+function Games(){
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/games.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/games.html";
+window.open(url, "_blank")
+
+
+}
+function holiday(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/holiday.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/holiday.html";
+window.open(url, "_blank")
+
+
+}
+function reaction(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/reactions.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/reactions.html";
+window.open(url, "_blank")
+
+
+}
+
+function sports(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/sports.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/sports.html";
+window.open(url, "_blank")
+
+
+}
+
+function clips(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/sports.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/sports.html";
+window.open(url, "_blank")
+
+
+}
+function orgi(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/workflows/originals.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/workflows/originals.html";
+window.open(url, "_blank")
+
+
+}
+function trending(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/workflows/trending.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/workflows/trending.html";
+window.open(url, "_blank")
+
+
+}
+function reactionSticker(){
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/workflows/Reactions.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/workflows/Reactions.html";
+window.open(url, "_blank")
+
+
+}
+function packs(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/workflows/packs.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/workflows/packs.html";
+window.open(url, "_blank")
+
+
+}
 
  
 
        
         
-   
+ function animal(){
+        let page = window.location.href;
+        let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/animals.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/animals.html";
+window.open(url, "_blank")
+
+
+
+}
+
+
+
+function   Artist(){
+    let page = window.location.href;
+    let pgg = page.split("\/");
+        
+        let page2  = page +=   "/.github/art.html";
+       
+
+        
+ let url = window.location.href +=  "/.github/art.html";
+window.open(url, "_blank")
+
+
+}
 
 
 
