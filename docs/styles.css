@@ -90,7 +90,13 @@ overscroll-behavior-y:initial;
 cursor: pointer;
 }
 
-
+.img{
+position: fixed;
+top: -215px;
+height: 290px;
+width: 200px;
+animation: up 2s;
+}
 .gifacc,.gifac{
     position: fixed;
   right: 0;
@@ -359,7 +365,7 @@ margin-top: 15px;
 
 .img{
     position: fixed;
-   top: -35px; 
+ 
   
 }
 .headnav{
@@ -465,6 +471,19 @@ width: 50%;
       
 
 }
+
+
+@media screen and (max-width: 469px) {
+    .img{
+    position: fixed;
+    top: -215px;
+    height: 270px;
+    width: 200px;
+    animation: up 2s;
+
+    }
+}
+
 
 @media screen and  (min-width: 286px){
     
@@ -620,11 +639,10 @@ padding: 7px 10px 0px 0px;
 }
 .img{
     position: fixed;
-   top: -85px;
-   height: 190px; 
-  width: 200px;
-animation: up 2s;
-  
+    top: -215px;
+    height: 290px;
+    width: 200px;
+    animation: up 2s;
 }
 .giflogin{
     margin-right: 30px;
@@ -680,9 +698,19 @@ to{
 }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) {
     
-       
+       .open{
+margin-right: 20px;
+font-size: 2.5em;
+margin-top: -50px;
+       }
+
+       .close{
+        margin-right: 20px;
+        font-size: 4em;
+        margin-top: -50px;
+       }
 }
 .ma{
     position: relative;
@@ -833,3 +861,7 @@ text-align: center;
 }
 
 
+
+.item_nav:hover{
+cursor: pointer;
+}
