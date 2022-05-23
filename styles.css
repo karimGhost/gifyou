@@ -190,10 +190,18 @@ color: rgb(0, 11, 10)
    font-style: italic;
    font-family: fantasy;
    transform: skewX(-15deg);
-
+   -webkit-transition-delay: 10s ;
+   transition-duration: 5s;
+   transition-delay: 5s;
+  transition: ease-out;
+ 
 }
 
 
+.open:hover{
+    color: rgb(8, 114, 206);
+   
+}
 
 
 .search_bar{
@@ -549,6 +557,7 @@ margin-top: 35px;
     z-index: 3;
 }
 
+
 .close{
 z-index: 3;
 }
@@ -701,14 +710,14 @@ to{
 @media screen and (min-width: 900px) {
     
        .open{
-margin-right: 20px;
-font-size: 2.5em;
-margin-top: -50px;
+        margin-right: 20px;
+        font-size: 2.5em;
+        margin-top: -35px;
        }
 
        .close{
         margin-right: 20px;
-        font-size: 4em;
+        font-size: 90px;
         margin-top: -50px;
        }
 }
@@ -865,3 +874,4 @@ text-align: center;
 .item_nav:hover{
 cursor: pointer;
 }
+
