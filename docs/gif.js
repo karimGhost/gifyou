@@ -1,3 +1,5 @@
+
+
 let av = document.querrySelector(".img");
 
 av.addEventListener("click", function(e){
@@ -17,3 +19,6 @@ av.addEventListener("click", function(e){
   window.location.href = hh;
 
 })
+
+
+let q = document.querrySelector("img").setAttribute(":hover", "cursor: pointer")
