@@ -773,3 +773,9 @@ header {
 .item_nav:hover > a {
     color: brown;
 }
+
+.main_container > h2 {
+    background-color: #4a433a;
+    margin-top: -17px;
+    padding-left: 10px;
+}
