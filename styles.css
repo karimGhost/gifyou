@@ -754,12 +754,14 @@ header {
     cursor: pointer;
 }
 
-.changed {
+.changes:hover + .changed{
     color: black;
     
 }
 
-.changes {
+
+
+.changes:hover{
     background-color: aliceblue;
 }        
       
