@@ -33,15 +33,15 @@
 <div class="navbar">
 
 <ul class="navul bar">
-    <li class="font"><a class="fot"  href="/" >
+    <li class="font" onclick="newgif()"><a class="fot" onclick="newgif()"  >
         New_Gifs</a> </li>
     
     <span class="dropdown headnav" style="cursor: pointer;">
-        <span class="fon drop"  >more gif<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+        <span class="fon drop"  >more gifs<i class="fa fa-angle-down" aria-hidden="true"></i></span>
        
         <div class="drop_container">
-        <li class="nav_item "><a class="droped" href="">Gifs</a></li>
-    <li class="nav_item "><a class="droped" href="">clip_Gifs</a></li>
+        <li class="nav_item" onclick="gifs()"><a class="droped" onclick="gifs()" >Gifs</a></li>
+    <li class="nav_item"  id="sticker"><a class="droped" >Stickers</a></li>
         </span>
 </div>
 <!---->
@@ -227,7 +227,7 @@
 <h2 style= "text-align: left; color: grey; font-style: italic;">MoreGifs</h2>
 
 <div class="big_container">
-<div class="mo">
+<div class="mo" #sticker>
 
 
 </div>
