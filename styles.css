@@ -754,7 +754,7 @@ header {
     cursor: pointer;
 }
 
-.changes:hover + .changed{
+.changes:hover, .changed:hover{
     color: black;
     
 }
