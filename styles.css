@@ -767,3 +767,7 @@ header {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.item_nav:hover > a {
+    color: brown;
+}
