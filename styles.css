@@ -753,3 +753,16 @@ header {
 .item_nav:hover {
     cursor: pointer;
 }
+
+.changed {
+    color: black;
+    
+}
+
+.changes {
+    background-color: aliceblue;
+}        
+      
+.nav {
+    overflow-y: hidden;        
+}
